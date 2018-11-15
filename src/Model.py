@@ -55,8 +55,8 @@ class Model(object):
 
         # compute state derivatives
         xd = x*(a1*(c/(1+b1*c))-a3*(y/(1+b2*x))-d1)
-        yd = y*(y_a*a2*(x/(1+b2*x))-d2)
-        cd = c*V*((2*k2*d1)-(4*k4*d1)*c*c-(a1*k1)*(x/(1+b1*c)))
-
+        yd = y*(a2*(x/(1+b2*x))-d2)
+        cd = c*V*( (2*k2*d1) - (4*k4*d1)*c*c-(a1*k1)*(x/(1+b1*c)) )
+        #cd=c*V*xd/x
         # return the state derivatives
         return [xd, yd, cd]
