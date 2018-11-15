@@ -101,7 +101,7 @@ state0 = [2.0, 0.0, 0.0]
 t = np.linspace(0.0, 80.0, 800)
 legends=["c < d1/(a1-b1*d1)","c = d1/(a1-b1*d1)","c > d1/(a1-b1*d1)"]
 fixedMeanTraits=[fixedMeanTrait-0.05,fixedMeanTrait,fixedMeanTrait+0.05]
-compareFixedMeanTrait(fixedMeanTraits,state0,t,legends)
+#compareFixedMeanTrait(fixedMeanTraits,state0,t,legends)
 
 
 
@@ -110,9 +110,13 @@ print(diccModelValues)
 state0 = [0.5, 0.3, 0.5]
 t = np.linspace(0.0,  5000,  5000)
 states=simulateModel(diccModelValues,state0,t)
-plot2d(states,t)
-plot3d(states,t)
-plot2dvs(states,t)
+#plot2d(states,t)
+#plot3d(states,t)
+#plot2dvs(states,t)
 diccModelValues["V"]=(1/3)*0.2
+states=simulateModel(diccModelValues,state0,t)
+plot2d(states,t)
+diccModelValues["V"]=(1/3)
+t = np.linspace(0,  800,  800*4)
 states=simulateModel(diccModelValues,state0,t)
 plot2d(states,t)
