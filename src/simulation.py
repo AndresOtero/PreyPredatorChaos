@@ -5,27 +5,10 @@ import scipy.integrate as spi
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.colors import BoundaryNorm
+from matplotlib.ticker import MaxNLocator
+from matplotlib import cm
 
-
-
-"""state0 = [2.0, 3.0, 4.0]
-t = np.linspace(0.0, 30.0, 3000)
-
-
-model=Model({})
-state = odeint(model.Lorenz, state0, t)
-print(state)
-print(len(state))
-
-# do some fancy 3D plotting
-fig = plt.figure()
-ax = fig.gca(projection='3d')
-ax.plot(state[:,0],state[:,1],state[:,2])
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
-plt.show()
-"""
 diccModelValues={
 'a1': 2.5,
 'a2': 0.05,
@@ -40,37 +23,58 @@ diccModelValues={
 'y_a': 8.0,
 'V' : 0
 }
+
 d1=diccModelValues['d1']
 a1=diccModelValues['a1']
 b1=diccModelValues['b1']
 
 model=Model(diccModelValues)
 
-def compareFixedMeanTrait(fixedMeanTraits,state0,t,legends):
-    print("Fixed Mean Trait ", fixedMeanTraits)
+def compareFixedMeanTrait(fixedMeanTraits,state0,t,legends,yLimMin=0,yLimMax=0,xLabel="x",yLabel="y"):
+    print("Fixed Mean Traits ", fixedMeanTraits)
     fig = plt.figure()
     ax = fig.gca()
     for fixedMeanTrait in fixedMeanTraits:
         model.setFixedMeanTrait(fixedMeanTrait)
-        stateFixedMeanTrait = odeint(model.function, state0, t)
-        ax.plot(t, stateFixedMeanTrait[:, 0])
+        model.simulate(state0,t)
+        ax.plot(t, model.getXArray())
     ax.legend(legends)
-    ax.set_ylim(0,50)
+    ax.set_ylim(yLimMin,yLimMax)
+    ax.set_xlabel(xLabel)
+    ax.set_ylabel(yLabel)
     plt.show()
 
-def simulateModel(diccModelValues,state0,t):
-    model=Model(diccModelValues)
-
-    #model.unSetFixedMeanTrait()
-    states = odeint(model.function, state0, t)
-    return  states
-def plot2d(states,t):
+def plot2d(states,t,leftLim=0,rigthLim=0):
     fig = plt.figure()
     ax = fig.gca()
     ax.plot(t, states[:, 0])
     ax.plot(t, states[:, 1])
     ax.plot(t, states[:, 2])
     ax.legend(["x","y","c"])
+    if(rigthLim!=0 ):
+        ax.set_xlim(leftLim,rigthLim)
+    plt.show()
+
+def plot2d_1vs1(state,t):
+    fig = plt.figure()
+    ax = fig.gca()
+    ax.plot(t, state)
+    ax.legend(["r"])
+    ax.set_xlabel("t")
+    plt.show()
+
+
+def plot2d_r(states,r,t,leftLim=0,rigthLim=0):
+    fig = plt.figure()
+    ax = fig.gca()
+    ax.plot(t, states[:, 0])
+    ax.plot(t, states[:, 1])
+    ax.plot(t, states[:, 2])
+    ax.plot(t,r)
+    ax.legend(["x","y","c","r"])
+    if(rigthLim!=0 ):
+        ax.set_xlim(leftLim,rigthLim)
+
     plt.show()
 
 def plot2dvs(states,t):
@@ -101,22 +105,28 @@ state0 = [2.0, 0.0, 0.0]
 t = np.linspace(0.0, 80.0, 800)
 legends=["c < d1/(a1-b1*d1)","c = d1/(a1-b1*d1)","c > d1/(a1-b1*d1)"]
 fixedMeanTraits=[fixedMeanTrait-0.05,fixedMeanTrait,fixedMeanTrait+0.05]
-#compareFixedMeanTrait(fixedMeanTraits,state0,t,legends)
+compareFixedMeanTrait(fixedMeanTraits,state0,t,legends,yLimMin=t.min(),yLimMax=t.max(),xLabel="t",yLabel="x")
 
 
-
+"""
 diccModelValues["V"]=(1/3)
 print(diccModelValues)
 state0 = [0.5, 0.3, 0.5]
 t = np.linspace(0.0,  5000,  5000)
-states=simulateModel(diccModelValues,state0,t)
+model=Model(diccModelValues)
+states=model.simulate(state0,t)
 #plot2d(states,t)
 #plot3d(states,t)
 #plot2dvs(states,t)
 diccModelValues["V"]=(1/3)*0.2
-states=simulateModel(diccModelValues,state0,t)
-plot2d(states,t)
+model=Model(diccModelValues)
+states=model.simulate(state0,t)
+#plot2d(states,t)
 diccModelValues["V"]=(1/3)
-t = np.linspace(0,  800,  800*4)
-states=simulateModel(diccModelValues,state0,t)
-plot2d(states,t)
+t = np.linspace(0,  800,  800*5)
+model=Model(diccModelValues)
+states=model.simulate(state0,t)
+#plot2d(states,t,250,800)
+r=[model.r(state[0],state[1],state[2]) for state in states]
+plot2d_r(states,r,t,250,800)
+"""
