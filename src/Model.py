@@ -24,8 +24,6 @@ class Model(object):
         self.y_a = self.diccModelValues['y_a']
         self.V = self.diccModelValues['V']
 
-    def changeGeneticVariation(self,v):
-        self.V=v
 
     def setFixedMeanTrait(self,fixedMeanTrait):
         self.fixedMeanTrait=fixedMeanTrait
@@ -55,6 +53,9 @@ class Model(object):
         secondTerm=-1*self.d1#*(1-self.k2*(c**2-c**(-2))+self.k4*(c**4-c**(-4)))
         thirdTerm=self.a2*(x*y)/(1+self.b2*x)
         return (firstTerm+secondTerm+thirdTerm)
+
+    def calculateR(self):
+        return np.array([self.r(state[0], state[1], state[2]) for state in self.states])
 
     def simulate(self,state0,t):
         self.states=  odeint(self.function, state0, t)

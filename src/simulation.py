@@ -1,5 +1,6 @@
 from cProfile import label
 from Model import  Model
+from PlotHelper import PlotHelper
 import numpy as np
 import scipy.integrate as spi
 import matplotlib.pyplot as plt
@@ -30,103 +31,46 @@ b1=diccModelValues['b1']
 
 model=Model(diccModelValues)
 
-def compareFixedMeanTrait(fixedMeanTraits,state0,t,legends,yLimMin=0,yLimMax=0,xLabel="x",yLabel="y"):
+def compareFixedMeanTrait(fixedMeanTraits,state0,t,legends=[],yLimMin=0,yLimMax=0,xLabel="x",yLabel="y",title=""):
     print("Fixed Mean Traits ", fixedMeanTraits)
-    fig = plt.figure()
-    ax = fig.gca()
+    list_of_lines=[]
     for fixedMeanTrait in fixedMeanTraits:
         model.setFixedMeanTrait(fixedMeanTrait)
         model.simulate(state0,t)
-        ax.plot(t, model.getXArray())
-    ax.legend(legends)
-    ax.set_ylim(yLimMin,yLimMax)
-    ax.set_xlabel(xLabel)
-    ax.set_ylabel(yLabel)
-    plt.show()
+        list_of_lines.append( model.getXArray())
+    PlotHelper.plot2d(list_of_lines,t,legends,yLimMin=yLimMin,yLimMax=yLimMax,xLabel=xLabel,yLabel=yLabel,title=title)
 
-def plot2d(states,t,leftLim=0,rigthLim=0):
-    fig = plt.figure()
-    ax = fig.gca()
-    ax.plot(t, states[:, 0])
-    ax.plot(t, states[:, 1])
-    ax.plot(t, states[:, 2])
-    ax.legend(["x","y","c"])
-    if(rigthLim!=0 ):
-        ax.set_xlim(leftLim,rigthLim)
-    plt.show()
-
-def plot2d_1vs1(state,t):
-    fig = plt.figure()
-    ax = fig.gca()
-    ax.plot(t, state)
-    ax.legend(["r"])
-    ax.set_xlabel("t")
-    plt.show()
-
-
-def plot2d_r(states,r,t,leftLim=0,rigthLim=0):
-    fig = plt.figure()
-    ax = fig.gca()
-    ax.plot(t, states[:, 0])
-    ax.plot(t, states[:, 1])
-    ax.plot(t, states[:, 2])
-    ax.plot(t,r)
-    ax.legend(["x","y","c","r"])
-    if(rigthLim!=0 ):
-        ax.set_xlim(leftLim,rigthLim)
-
-    plt.show()
-
-def plot2dvs(states,t):
-    labels=["x","y","c"]
-    plots=[(0,1),(0,2),(2,1)]
-    for i,j in plots:
-            fig = plt.figure()
-            ax = fig.gca()
-            ax.plot(states[:, i],states[:, j] )
-            ax.set_xlabel(labels[i])
-            ax.set_ylabel(labels[j])
-            if(i==2 and j==1):
-                ax.invert_xaxis()
-            plt.show()
-
-
-def plot3d(states,t):
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    ax.plot(states[:,0],states[:,1],states[:,2])
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_zlabel('c')
-    plt.show()
 
 fixedMeanTrait=d1/(a1-b1*d1)
 state0 = [2.0, 0.0, 0.0]
 t = np.linspace(0.0, 80.0, 800)
 legends=["c < d1/(a1-b1*d1)","c = d1/(a1-b1*d1)","c > d1/(a1-b1*d1)"]
 fixedMeanTraits=[fixedMeanTrait-0.05,fixedMeanTrait,fixedMeanTrait+0.05]
-compareFixedMeanTrait(fixedMeanTraits,state0,t,legends,yLimMin=t.min(),yLimMax=t.max(),xLabel="t",yLabel="x")
+compareFixedMeanTrait(fixedMeanTraits,state0,t,legends,yLimMin=t.min(),yLimMax=t.max(),xLabel="t",yLabel="x",title="Rasgo medio fijo")
 
-
-"""
-diccModelValues["V"]=(1/3)
-print(diccModelValues)
 state0 = [0.5, 0.3, 0.5]
 t = np.linspace(0.0,  5000,  5000)
-model=Model(diccModelValues)
-states=model.simulate(state0,t)
-#plot2d(states,t)
-#plot3d(states,t)
-#plot2dvs(states,t)
 diccModelValues["V"]=(1/3)*0.2
 model=Model(diccModelValues)
-states=model.simulate(state0,t)
-#plot2d(states,t)
+model.simulate(state0,t)
+PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,["x","y","c"],xLabel="t",title="Interacciones Predador-Presa con variacion genetica lenta")
+PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,["x","y","c"],xLimMax=2000,xLimMin=1000,xLabel="t",title="Interacciones Predador-Presa con variacion genetica lenta (zoom)")
+
+
 diccModelValues["V"]=(1/3)
-t = np.linspace(0,  800,  800*5)
 model=Model(diccModelValues)
+state0 = [0.5, 0.3, 0.5]
+t = np.linspace(0.0,  5000,  15*5000)
 states=model.simulate(state0,t)
-#plot2d(states,t,250,800)
-r=[model.r(state[0],state[1],state[2]) for state in states]
-plot2d_r(states,r,t,250,800)
-"""
+PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,legends=["x","y","c"],xLabel="t",title="Interacciones Predador-Presa con caos")
+PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,legends=["x","y","c"],xLabel="t",title="Interacciones Predador-Presa con caos (zoom)", xLimMin=500,xLimMax=2000)
+
+PlotHelper.plot3d(model.getXArray(),model.getYArray(),model.getCArray(),t,label_x="x",label_y="y",label_z="c",title="Interacciones Predador-Presa con caos 3-d")
+
+PlotHelper.plot2d([model.getYArray()],model.getXArray(),yLabel="y",xLabel="x",title="Interacciones Predador-Presa con caos (plano xy)")
+PlotHelper.plot2d([model.getCArray()],model.getXArray(),yLabel="c",xLabel="x",title="Interacciones Predador-Presa con caos (plano xc)")
+PlotHelper.plot2d([model.getYArray()],model.getCArray(),yLabel="y",xLabel="c",title="Interacciones Predador-Presa con caos (plano cy)",invert_x=True)
+
+
+r=model.calculateR()
+PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray(),r],t,legends=["x","y","c","r"],xLimMin=250,xLimMax=800,xLabel="t",title="Interacciones Predador-Presa con la funcion de aptitud")
