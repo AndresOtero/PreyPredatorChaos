@@ -11,7 +11,7 @@ class PlotHelper(object):
         if (xLimMax != 0):
             ax.set_xlim(xLimMin, xLimMax)
         if (yLimMax != 0):
-            ax.set_xlim(yLimMin, yLimMax)
+            ax.set_ylim(yLimMin, yLimMax)
         ax.set_xlabel(xLabel)
         ax.set_ylabel(yLabel)
         ax.set_title(title)
@@ -20,7 +20,7 @@ class PlotHelper(object):
         plt.savefig(title + ".png")
         plt.show()
 
-    def plot3d(x, y, z, t, label_x="x", label_y="y", label_z="z", title=""):
+    def plot3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0 ,label_x="x", label_y="y", label_z="z", title=""):
         fig = plt.figure()
         ax = fig.gca(projection='3d')
         ax.plot(x, y, z)
@@ -28,5 +28,24 @@ class PlotHelper(object):
         ax.set_ylabel(label_y)
         ax.set_zlabel(label_z)
         ax.set_title(title)
+        if (xLimMax != 0):
+            ax.set_xlim(xLimMin, xLimMax)
+        if (yLimMax != 0):
+            ax.set_ylim(yLimMin, yLimMax)
+        plt.savefig(title + ".png")
+        plt.show()
+
+    def scatter3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0, label_x="x", label_y="y", label_z="z", title=""):
+        fig = plt.figure()
+        ax = fig.gca(projection='3d')
+        ax.scatter(x, y, z)
+        ax.set_xlabel(label_x)
+        ax.set_ylabel(label_y)
+        ax.set_zlabel(label_z)
+        ax.set_title(title)
+        if (xLimMax != 0):
+            ax.set_xlim(xLimMin, xLimMax)
+        if (yLimMax != 0):
+            ax.set_ylim(yLimMin, yLimMax)
         plt.savefig(title + ".png")
         plt.show()

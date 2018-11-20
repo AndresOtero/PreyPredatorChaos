@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a09edef8-5ff6-44d9-bf9b-30a4027e1094" name="Default Changelist" comment="Pequeños cambios">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PlotHelper.py" afterDir="false" />
+    <list default="true" id="a09edef8-5ff6-44d9-bf9b-30a4027e1094" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlotHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rasgo medio fijo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rasgo medio fijo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PreyPredatorChaos$simulation.coverage" NAME="simulation Coverage Results" MODIFIED="1542420359696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PreyPredatorChaos$simulation.coverage" NAME="simulation Coverage Results" MODIFIED="1542736814125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1959979656">
@@ -53,18 +53,22 @@
     <session id="-434871953">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1092" />
+          <entry key="py" value="1785" />
+          <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1092" />
+          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="Python" value="1785" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -84,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="47" column="31" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="31" />
+            <state relative-caret-position="270">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -96,11 +100,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-344">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="560">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1542420253595" expanded="true" signature="1903:1998" ph="..." />
+                <marker date="1542422678862" expanded="true" signature="1832:2589" ph="..." />
+                <marker date="1542422678862" expanded="true" signature="2607:2616" ph="..." />
+                <marker date="1542422678862" expanded="true" signature="2853:2948" ph="..." />
               </folding>
             </state>
           </provider>
@@ -109,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlotHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="421">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -144,10 +150,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="77" />
-    <option name="y" value="47" />
-    <option name="width" value="1279" />
-    <option name="height" value="701" />
+    <option name="x" value="112" />
+    <option name="y" value="35" />
+    <option name="width" value="1075" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -265,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542289053257</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ordeno codigo y agrego imagenes">
+      <created>1542416359466</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542416359466</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -279,14 +292,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49839228" visible="true" weight="0.25373134" />
-      <window_info id="Structure" order="1" sideWeight="0.5016077" side_tool="true" visible="true" weight="0.25373134" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974093" weight="0.46896553" />
+      <window_info id="Structure" order="1" sideWeight="0.50259066" side_tool="true" weight="0.46896553" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3253796" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4370933" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -300,33 +312,33 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49678457" visible="true" weight="0.23773988" />
+      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49518305" visible="true" weight="0.4392324" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="274" height="543" id="Documentation" order="5" sideWeight="0.50321543" side_tool="true" visible="true" weight="0.23773988" />
+      <window_info anchor="right" x="0" y="0" width="274" height="543" id="Documentation" order="5" sideWeight="0.50481695" side_tool="true" visible="true" weight="0.4392324" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25379092" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974093" visible="true" weight="0.46896553" />
+      <window_info id="Structure" order="1" sideWeight="0.50259066" side_tool="true" visible="true" weight="0.46896553" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32626426" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39967373" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4373178" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32626426" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32952693" />
-      <window_info anchor="right" x="0" y="0" width="274" height="543" id="Documentation" order="0" sideWeight="0.50121653" side_tool="true" weight="0.32402235" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.49878347" visible="true" weight="0.32402235" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039905" side_tool="true" weight="0.32626426" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49960095" weight="0.3253796" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49960095" weight="0.3286334" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.4974093" weight="0.43940887" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="274" height="543" id="Documentation" order="5" sideWeight="0.50259066" side_tool="true" weight="0.43940887" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,14 +350,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Esta vivo" />
     <MESSAGE value="Pequeños cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pequeños cambios" />
+    <MESSAGE value="Ordeno codigo y agrego imagenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ordeno codigo y agrego imagenes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Model.py</url>
-          <line>60</line>
+          <line>73</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -356,28 +369,30 @@
     <entry file="file:///usr/lib/python3/dist-packages/matplotlib/axes/_base.py" />
     <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py" />
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/numpy/lib/stride_tricks.py" />
-    <entry file="file://$PROJECT_DIR$/src/PlotHelper.py">
+    <entry file="file://$PROJECT_DIR$/src/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="560">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1542422678862" expanded="true" signature="1832:2589" ph="..." />
+            <marker date="1542422678862" expanded="true" signature="2607:2616" ph="..." />
+            <marker date="1542422678862" expanded="true" signature="2853:2948" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model.py">
+    <entry file="file://$PROJECT_DIR$/src/PlotHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-344">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1542420253595" expanded="true" signature="1903:1998" ph="..." />
-          </folding>
+        <state relative-caret-position="421">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/simulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="31" />
+        <state relative-caret-position="270">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

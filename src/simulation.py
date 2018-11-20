@@ -28,7 +28,6 @@ diccModelValues={
 d1=diccModelValues['d1']
 a1=diccModelValues['a1']
 b1=diccModelValues['b1']
-
 model=Model(diccModelValues)
 
 def compareFixedMeanTrait(fixedMeanTraits,state0,t,legends=[],yLimMin=0,yLimMax=0,xLabel="x",yLabel="y",title=""):
@@ -56,7 +55,6 @@ model.simulate(state0,t)
 PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,["x","y","c"],xLabel="t",title="Interacciones Predador-Presa con variacion genetica lenta")
 PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,["x","y","c"],xLimMax=2000,xLimMin=1000,xLabel="t",title="Interacciones Predador-Presa con variacion genetica lenta (zoom)")
 
-
 diccModelValues["V"]=(1/3)
 model=Model(diccModelValues)
 state0 = [0.5, 0.3, 0.5]
@@ -65,7 +63,7 @@ states=model.simulate(state0,t)
 PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,legends=["x","y","c"],xLabel="t",title="Interacciones Predador-Presa con caos")
 PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray()],t,legends=["x","y","c"],xLabel="t",title="Interacciones Predador-Presa con caos (zoom)", xLimMin=500,xLimMax=2000)
 
-PlotHelper.plot3d(model.getXArray(),model.getYArray(),model.getCArray(),t,label_x="x",label_y="y",label_z="c",title="Interacciones Predador-Presa con caos 3-d")
+PlotHelper.plot3d(model.getXArray(),model.getYArray(),model.getCArray(),label_x="x",label_y="y",label_z="c",title="Interacciones Predador-Presa con caos 3-d")
 
 PlotHelper.plot2d([model.getYArray()],model.getXArray(),yLabel="y",xLabel="x",title="Interacciones Predador-Presa con caos (plano xy)")
 PlotHelper.plot2d([model.getCArray()],model.getXArray(),yLabel="c",xLabel="x",title="Interacciones Predador-Presa con caos (plano xc)")
@@ -74,3 +72,5 @@ PlotHelper.plot2d([model.getYArray()],model.getCArray(),yLabel="y",xLabel="c",ti
 
 r=model.calculateR()
 PlotHelper.plot2d([model.getXArray(),model.getYArray(),model.getCArray(),r],t,legends=["x","y","c","r"],xLimMin=250,xLimMax=800,xLabel="t",title="Interacciones Predador-Presa con la funcion de aptitud")
+PlotHelper.plot3d(r,t,model.getCArray(),yLimMin=250,yLimMax=800,label_x="r",label_y="t",label_z="c",title="Interacciones Predador-Presa con caos 3-d con la funcion de aptitud")
+
