@@ -82,3 +82,6 @@ states=model.simulate(state0,t)
 
 r_matrix=model.calculateR(c_array)
 PlotHelper.plotHeatMapWithLines(t,c_array,r_matrix,line1=model.getCArray(),line2=model.getXArray(),legends=["c","x"],xLimMin=250,xLimMax=800,label_x="t",label_y="c",title="Mapa de calor funcion de adaptacion")
+
+PlotHelper.plot2d([r_matrix[:,400]],c_array)
+PlotHelper.plot2d([r_matrix[:,560]],c_array)

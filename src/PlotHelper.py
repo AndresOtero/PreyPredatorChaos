@@ -19,6 +19,7 @@ class PlotHelper(object):
         if invert_x:
             ax.invert_xaxis()
         plt.savefig(title + ".png")
+        plt.grid(True)
         plt.show()
 
     def plot3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0 ,label_x="x", label_y="y", label_z="z", title=""):
@@ -34,6 +35,8 @@ class PlotHelper(object):
         if (yLimMax != 0):
             ax.set_ylim(yLimMin, yLimMax)
         plt.savefig(title + ".png")
+        plt.grid(True)
+
         plt.show()
 
     def scatter3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0, label_x="x", label_y="y", label_z="z", title=""):
@@ -49,6 +52,7 @@ class PlotHelper(object):
         if (yLimMax != 0):
             ax.set_ylim(yLimMin, yLimMax)
         plt.savefig(title + ".png")
+        plt.grid(True)
         plt.show()
 
     def plotHeatMapWithLines(x,y,z,line1=[],line2=[],legends=[],xLimMin=0,xLimMax=0, yLimMin=0, yLimMax=0,label_x="x", label_y="y", title=""):
