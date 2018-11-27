@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from matplotlib import ticker, cm
+from matplotlib import  cm
 
 class PlotHelper(object):
     def plot2d(list_of_lines, t, legends=[], xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0, xLabel="x", yLabel="y",

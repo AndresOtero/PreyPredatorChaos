@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a09edef8-5ff6-44d9-bf9b-30a4027e1094" name="Default Changelist" comment="">
+    <list default="true" id="a09edef8-5ff6-44d9-bf9b-30a4027e1094" name="Default Changelist" comment="Refactor y agrego mapa de calor y funcion de adaptacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (plano cy).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (plano cy).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (plano xc).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (plano xc).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (plano xy).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (plano xy).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (zoom).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos (zoom).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos 3-d con la funcion de aptitud.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos 3-d con la funcion de aptitud.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos 3-d.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos 3-d.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con caos.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interacciones Predador-Presa con la funcion de aptitud.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interacciones Predador-Presa con la funcion de aptitud.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlotHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlotHelper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,26 +59,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="91" />
-          <entry key="py" value="3573" />
-          <entry key="txt" value="31" />
+          <entry key="Python Console" value="95" />
+          <entry key="py" value="3677" />
+          <entry key="txt" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="31" />
-          <entry key="Python" value="3664" />
+          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="Python" value="3772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="png" value="18" />
+          <entry key="png" value="20" />
           <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="18" />
+          <entry key="Image" value="20" />
           <entry key="Python" value="10" />
         </counts>
       </usages-collector>
@@ -96,11 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="83" column="81" selection-start-line="83" selection-start-column="81" selection-end-line="83" selection-end-column="81" />
+            <state relative-caret-position="51">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -120,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="1190">
+              <caret line="70" column="26" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="26" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -129,16 +119,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlotHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+            <state relative-caret-position="-354">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interacciones Predador-Presa con variacion genetica lenta.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Mapa de calor funcion de adaptacion.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -167,8 +167,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Model.py" />
-        <option value="$PROJECT_DIR$/src/simulation.py" />
         <option value="$PROJECT_DIR$/src/PlotHelper.py" />
+        <option value="$PROJECT_DIR$/src/simulation.py" />
       </list>
     </option>
   </component>
@@ -307,7 +307,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542416359466</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor y agrego mapa de calor y funcion de adaptacion">
+      <created>1543338913894</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543338913894</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactor y agrego mapa de calor y funcion de adaptacion">
+      <created>1543337653843</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543337653843</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -339,7 +353,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50039905" side_tool="true" weight="0.32626426" />
       <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49960095" visible="true" weight="0.20715836" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49960095" weight="0.32614556" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49960095" weight="0.3253796" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.49865228" weight="0.2510661" />
@@ -383,19 +397,20 @@
     <MESSAGE value="Esta vivo" />
     <MESSAGE value="Pequeños cambios" />
     <MESSAGE value="Ordeno codigo y agrego imagenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ordeno codigo y agrego imagenes" />
+    <MESSAGE value="Refactor y agrego mapa de calor y funcion de adaptacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor y agrego mapa de calor y funcion de adaptacion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/PlotHelper.py</url>
-          <line>41</line>
+          <line>44</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/simulation.py</url>
-          <line>83</line>
+          <line>75</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
@@ -467,9 +482,6 @@
     <entry file="file://$PROJECT_DIR$/src/Interacciones Predador-Presa con caos 3-d V2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interacciones Predador-Presa con variacion genetica lenta.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interacciones Predador-Presa con caos 3-d.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -482,6 +494,9 @@
     <entry file="file://$PROJECT_DIR$/src/Interacciones Predador-Presa con caos 3-d con la funcion de aptitud.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mapa de calor funcion de adaptacion.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/matplotlib/contour.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -489,20 +504,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interacciones Predador-Presa con variacion genetica lenta.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="83" column="81" selection-start-line="83" selection-start-column="81" selection-end-line="83" selection-end-column="81" />
+        <state relative-caret-position="1190">
+          <caret line="70" column="26" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -511,10 +519,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlotHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+        <state relative-caret-position="-354">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
