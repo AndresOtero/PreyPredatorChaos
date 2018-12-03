@@ -3,7 +3,7 @@ from matplotlib import  cm
 
 class PlotHelper(object):
     def plot2d(list_of_lines, t, legends=[], xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0, xLabel="x", yLabel="y",
-               title="", invert_x=False):
+               title="", invert_x=False,show=True):
         fig = plt.figure()
         ax = fig.gca()
         for line in list_of_lines:
@@ -18,11 +18,12 @@ class PlotHelper(object):
         ax.set_title(title)
         if invert_x:
             ax.invert_xaxis()
-        plt.savefig(title + ".png")
+        plt.savefig("../img/"+title + ".png")
         plt.grid(True)
-        plt.show()
+        if(show):
+            plt.show()
 
-    def plot3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0 ,label_x="x", label_y="y", label_z="z", title=""):
+    def plot3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0 ,label_x="x", label_y="y", label_z="z", title="",show=True):
         fig = plt.figure()
         ax = fig.gca(projection='3d')
         ax.plot(x, y, z)
@@ -34,12 +35,12 @@ class PlotHelper(object):
             ax.set_xlim(xLimMin, xLimMax)
         if (yLimMax != 0):
             ax.set_ylim(yLimMin, yLimMax)
-        plt.savefig(title + ".png")
+        plt.savefig("../img/"+title + ".png")
         plt.grid(True)
+        if(show):
+            plt.show()
 
-        plt.show()
-
-    def scatter3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0, label_x="x", label_y="y", label_z="z", title=""):
+    def scatter3d(x, y, z, xLimMin=0, xLimMax=0, yLimMin=0, yLimMax=0, label_x="x", label_y="y", label_z="z", title="",show=True):
         fig = plt.figure()
         ax = fig.gca(projection='3d')
         ax.scatter(x, y, z)
@@ -51,11 +52,12 @@ class PlotHelper(object):
             ax.set_xlim(xLimMin, xLimMax)
         if (yLimMax != 0):
             ax.set_ylim(yLimMin, yLimMax)
-        plt.savefig(title + ".png")
+        plt.savefig("../img/"+title + ".png")
         plt.grid(True)
-        plt.show()
+        if(show):
+            plt.show()
 
-    def plotHeatMapWithLines(x,y,z,line1=[],line2=[],legends=[],xLimMin=0,xLimMax=0, yLimMin=0, yLimMax=0,label_x="x", label_y="y", title=""):
+    def plotHeatMapWithLines(x,y,z,line1=[],line2=[],legends=[],xLimMin=0,xLimMax=0, yLimMin=0, yLimMax=0,label_x="x", label_y="y", title="",show=True):
         # PlotHelper.scatter3d(r_matrix[:,0],r_matrix[:,1],r_matrix[:,2])
         fig = plt.figure()
         ax = fig.gca()
@@ -72,6 +74,7 @@ class PlotHelper(object):
         ax.plot(line1, color="k", linewidth=1, linestyle='dashed')
         ax.plot(line2, color="m", linewidth=1, linestyle='dashed')
         ax.set_title(title)
-        plt.savefig(title + ".png")
+        plt.savefig("../img/"+title + ".png")
         plt.grid(True)
-        plt.show()
+        if(show):
+            plt.show()

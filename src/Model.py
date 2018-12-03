@@ -1,7 +1,4 @@
-from cProfile import label
 import numpy as np
-import scipy.integrate as spi
-import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from mpl_toolkits.mplot3d import Axes3D
 
